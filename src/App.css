@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300&display=swap');
 
 body {
-    background-image: url('./img/back.jpg');
+    background-image: url("https://wallpaperaccess.com/full/2927307.jpg");
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
-    font-family: 'Source Code Pro', monospace;
+    font-family: "Source Code Pro", monospace;
 }
 
 .container {
@@ -21,13 +21,13 @@ body {
     align-items: center;
     gap: 1em;
     color: #fff;
-    padding: 1.5em;
+    padding: 1em;
     border-radius: 20px 50px / 50px 20px;
 }
 
 .headings {
     text-align: center;
-    padding: 1.25em;
+    padding: 1em;
 }
 
 .headings > h1 {
@@ -43,7 +43,7 @@ body {
 .flex {
     display: flex;
     gap: 1em;
-    margin: 1em auto;
+    margin: 0.875em auto;
     padding: 1em;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +51,7 @@ body {
 
 .number > input {
     width: 15em;
-    height: 40px;
+    height: 2.5em;
     outline: none;
     border: 2px solid #fff;
     border-radius: 50px 25px / 25px 50px;
@@ -85,7 +85,7 @@ button:hover {
 
 .result {
     text-align: center;
-    padding: 1.25em;
+    padding: 1em;
 }
 
 .result > p {
@@ -95,11 +95,15 @@ button:hover {
 }
 
 @media only screen and (max-width: 768px) {
-    html {
-        font-size: 10px;
-    }
+html {
+    font-size: 10px;
+}
 
-    .flex {
-        flex-direction: column;
-    }
+.flex {
+    flex-direction: column;
+}
+
+.number > h4 {
+    text-align: center;
+}
 }

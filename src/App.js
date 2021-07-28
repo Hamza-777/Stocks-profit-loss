@@ -18,16 +18,26 @@ const App = () => {
   }
 
   const clickHandler = () => {
-    const then = Number(previous) * Number(number);
-    const now = Number(current) * Number(number);
-    let percent = (((now - then) / then) * 100).toFixed(2);
-
-    if(percent === 0) {
-      setText(`Percentage Gain: ${percent}% and Total Profit: ${now - then}`);
-    } else if(percent > 0) {
-      setText(`Percentage Gain: ${percent}% and Total Profit: ${now - then} 🤑🥳`);
+    if (previous <= 0 || number <= 0 || current <= 0) {
+      setText("Provided inputs should be grater than 0");
     } else {
-      setText(`Percentage Loss: ${Math.abs(percent)}% and Total Loss: ₹${Math.abs(now - then)} 😞😞`);
+      const then = Number(previous) * Number(number);
+      const now = Number(current) * Number(number);
+      let percent = (((now - then) / then) * 100).toFixed(2);
+
+      if (percent === 0) {
+        setText(`Percentage Gain: ${percent}% and Total Profit: ${now - then}`);
+      } else if (percent > 0) {
+        setText(
+          `Percentage Gain: ${percent}% and Total Profit: ${now - then} 🤑🥳`
+        );
+      } else {
+        setText(
+          `Percentage Loss: ${Math.abs(percent)}% and Total Loss: ₹${Math.abs(
+            now - then
+          )} 😞😞`
+        );
+      }
     }
   }
 
